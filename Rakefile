@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'rubygems'
 require 'bundler'
 begin
@@ -15,8 +16,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "jamming"
   gem.homepage = "http://github.com/andmej@gmail.com/jamming"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A Ruby library to generate images of guitar chords}
+  gem.description = %Q{A Ruby library to generate images of guitar chords}
   gem.email = "andmej@gmail.com"
   gem.authors = ["Andrés Mejía"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
