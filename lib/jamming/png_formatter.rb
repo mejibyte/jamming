@@ -12,11 +12,11 @@ module Jamming
 
     def print(opts={})
       
-      @max_fret = frets.compact.max
-      @min_fret = frets.compact.min
-      @min_fret = 1 if min_fret == 0
+      @max_fret = @frets.compact.max
+      @min_fret = @frets.compact.min
+      @min_fret = 1 if @min_fret == 0
 
-      @max_dist = max_fret - min_fret + 1
+      @max_dist = @max_fret - @min_fret + 1
 
       get_png_data
     end

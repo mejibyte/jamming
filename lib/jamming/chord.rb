@@ -1,13 +1,15 @@
+require 'jamming/png_formatter'
+
 module Jamming
   class Chord
     attr_reader :frets
     
     def initialize(chord_as_string)
-      @frets = parse(chords_as_string)
+      @frets = parse(chord_as_string)
     end
   
     def to_png(options = {})
-      Jamming::PngFormatter.new(self).print(options)
+      Jamming::PNGFormatter.new(frets).print(options)
     end
   
     protected
