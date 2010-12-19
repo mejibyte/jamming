@@ -32,39 +32,39 @@ module Jamming
         canvas.background_fill = 'white'
         x_div = @strings.size - 1
         
-        width_of_chord_box = 280
-        margin_side_of_chord_box = (width - width_of_chord_box) / 2
+        width_of_chord = 280
+        margin_side_of_chord = (width - width_of_chord) / 2
 
-        height_of_chord_box = 200
-        margin_top_of_chord_box = ((height - height_of_chord_box) * 2 / 3.0).floor
-        margin_bottom_of_chord_box = ((height - height_of_chord_box) / 3.0).ceil
+        height_of_chord = 200
+        margin_top_of_chord = ((height - height_of_chord) * 2 / 3.0).floor
+        margin_bottom_of_chord = ((height - height_of_chord) / 3.0).ceil
         
-        height_of_fret = height_of_chord_box / (@max_dist + 1)
+        height_of_fret = height_of_chord / (@max_dist + 1)
         radius_of_finger = (height_of_fret * 0.6) / 2
         
-        width_of_fret = width_of_chord_box / x_div
+        width_of_fret = width_of_chord / x_div
 
         # Draw all horizontal lines
         (@max_dist+2).times do |n|
-          canvas.line(margin_side_of_chord_box, n*height_of_fret+margin_top_of_chord_box, width - margin_side_of_chord_box, n*height_of_fret+margin_top_of_chord_box)
+          canvas.line(margin_side_of_chord, n*height_of_fret+margin_top_of_chord, width - margin_side_of_chord, n*height_of_fret+margin_top_of_chord)
         end
 
         @strings.each_with_index do |note, i|
-          canvas.line(i*width_of_fret+margin_side_of_chord_box, margin_top_of_chord_box, i*width_of_fret+margin_side_of_chord_box, height - margin_bottom_of_chord_box)
+          canvas.line(i*width_of_fret+margin_side_of_chord, margin_top_of_chord, i*width_of_fret+margin_side_of_chord, height - margin_bottom_of_chord)
 
           unless [0,nil].include?(@frets[i])
-            canvas.circle(radius_of_finger, i*width_of_fret+margin_side_of_chord_box,
-            (@frets[i] - @min_fret + 1)*height_of_fret - (height_of_fret / 2) + margin_top_of_chord_box)
+            canvas.circle(radius_of_finger, i*width_of_fret+margin_side_of_chord,
+            (@frets[i] - @min_fret + 1)*height_of_fret - (height_of_fret / 2) + margin_top_of_chord)
           end
 
-          canvas.text(i*width_of_fret+margin_side_of_chord_box, margin_top_of_chord_box - 6) do |txt| 
+          canvas.text(i*width_of_fret+margin_side_of_chord, margin_top_of_chord - 6) do |txt| 
             txt.tspan((@frets[i] || 'x').to_s).styles(
             :text_anchor => 'middle',
             :font_size => 24, 
             :font_family => 'helvetica',
             :fill => 'black')
           end
-          canvas.text(i*width_of_fret+margin_side_of_chord_box, height - margin_bottom_of_chord_box + 20) do |txt| 
+          canvas.text(i*width_of_fret+margin_side_of_chord, height - margin_bottom_of_chord + 20) do |txt| 
             txt.tspan(note).styles(:text_anchor => 'middle',
             :font_size => 18, 
             :font_family => 'helvetica',
@@ -73,7 +73,7 @@ module Jamming
         end
         
         if @label
-          canvas.text(width / 2, margin_top_of_chord_box / 2) do |txt|
+          canvas.text(width / 2, margin_top_of_chord / 2) do |txt|
             txt.tspan(@label).styles(:text_anchor => 'middle',
               :font_size => 36,
               :font_family => 'helvetica',
