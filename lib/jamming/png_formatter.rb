@@ -48,22 +48,37 @@ module Jamming
         (@max_dist+2).times do |n|
           canvas.line(margin_side_of_chord, n*height_of_fret+margin_top_of_chord, width - margin_side_of_chord, n*height_of_fret+margin_top_of_chord)
         end
+        
+        (@max_dist+1).times do |i|
+          canvas.text(margin_side_of_chord - 16, i*height_of_fret+margin_top_of_chord + height_of_fret / 2 + 10) do |txt|
+            txt.tspan(@min_fret + i).styles(
+              :text_anchor => 'end',
+              :font_size => 24,
+              :font_family => 'helvetica',
+              :fill => 'black')
+          end
+        end
 
         @strings.each_with_index do |note, i|
+          # Draw vertical lines
           canvas.line(i*width_of_fret+margin_side_of_chord, margin_top_of_chord, i*width_of_fret+margin_side_of_chord, height - margin_bottom_of_chord)
 
-          unless [0,nil].include?(@frets[i])
+          
+          if [0,nil].include?(@frets[i])
+            # Add a text at the top. Either an X or O
+            canvas.text(i*width_of_fret+margin_side_of_chord, margin_top_of_chord - 6) do |txt| 
+              txt.tspan((@frets[i] == 0 ? "O" : 'X').to_s).styles(
+              :text_anchor => 'middle',
+              :font_size => 24, 
+              :font_family => 'helvetica',
+              :fill => 'black')
+            end            
+          else
+            # Add a finger
             canvas.circle(radius_of_finger, i*width_of_fret+margin_side_of_chord,
             (@frets[i] - @min_fret + 1)*height_of_fret - (height_of_fret / 2) + margin_top_of_chord)
           end
-
-          canvas.text(i*width_of_fret+margin_side_of_chord, margin_top_of_chord - 6) do |txt| 
-            txt.tspan((@frets[i] || 'x').to_s).styles(
-            :text_anchor => 'middle',
-            :font_size => 24, 
-            :font_family => 'helvetica',
-            :fill => 'black')
-          end
+          
           canvas.text(i*width_of_fret+margin_side_of_chord, height - margin_bottom_of_chord + 20) do |txt| 
             txt.tspan(note).styles(:text_anchor => 'middle',
             :font_size => 18, 
