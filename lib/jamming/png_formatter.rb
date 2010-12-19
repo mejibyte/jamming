@@ -15,7 +15,7 @@ module Jamming
       @max_fret = @frets.compact.max
       @min_fret = @frets.compact.delete_if { |f| f == 0 }.min
 
-      @max_dist = @max_fret - @min_fret + 1
+      @max_dist = [@max_fret - @min_fret + 1, 3].max
 
       get_png_data
     end
