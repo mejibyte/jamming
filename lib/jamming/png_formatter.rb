@@ -14,6 +14,7 @@ module Jamming
       
       @max_fret = @frets.compact.max
       @min_fret = @frets.compact.delete_if { |f| f == 0 }.min
+      @min_fret = 1 if @max_fret < 4
 
       @max_dist = [@max_fret - @min_fret + 1, 3].max
 
