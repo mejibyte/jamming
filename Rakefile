@@ -14,7 +14,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "jamming"
-  gem.homepage = "http://github.com/andmej@gmail.com/jamming"
+  gem.homepage = "http://github.com/andmej/jamming"
   gem.license = "MIT"
   gem.summary = %Q{A Ruby library to generate images of guitar chords}
   gem.description = %Q{A Ruby library to generate images of guitar chords}
