@@ -19,6 +19,10 @@ or if you are using Bundler, add this line to your Gemfile:
     
 This will write Em7#9, _The Jimi Hendrix Chord_, to `tmp/old_good_jimi.png`.
 
+== Thanks
+
+Some code based on ander/chords[https://github.com/ander/chords], thanks!
+
 == Contributing to jamming
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
