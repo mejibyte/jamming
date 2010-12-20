@@ -28,7 +28,7 @@ module Jamming
       width = 400
       height = 300
       
-      rvg = Magick::RVG.new(400, 300).viewbox(0,0,width,height) do |canvas|
+      rvg = Magick::RVG.new(280, 210).viewbox(0,0,width,height) do |canvas|
         canvas.background_fill = 'white'
         x_div = @strings.size - 1
         
