@@ -64,7 +64,7 @@ module Jamming
 
           
           if [0,nil].include?(@frets[i])
-            # Add a text at the top. Either an X or O
+            # Add a letter at the top. Either an X or O
             canvas.text(i*width_of_fret+margin_side_of_chord, margin_top_of_chord - 6) do |txt| 
               txt.tspan((@frets[i] == 0 ? "O" : 'X').to_s).styles(
               :text_anchor => 'middle',
