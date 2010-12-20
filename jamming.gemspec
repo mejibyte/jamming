@@ -25,13 +25,14 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "examples/Em7#9.png",
+    "jamming.gemspec",
     "lib/jamming.rb",
     "lib/jamming/chord.rb",
     "lib/jamming/png_formatter.rb",
     "test/helper.rb",
     "test/test_jamming.rb"
   ]
-  s.homepage = %q{http://github.com/andmej@gmail.com/jamming}
+  s.homepage = %q{http://github.com/andmej/jamming}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
