@@ -30,7 +30,6 @@ module Jamming
       
       rvg = Magick::RVG.new(280, 210).viewbox(0,0,width,height) do |canvas|
         canvas.background_fill = 'white'
-        x_div = @strings.size - 1
         
         width_of_chord = 260
         margin_side_of_chord = (width - width_of_chord) / 2
@@ -42,7 +41,7 @@ module Jamming
         height_of_fret = height_of_chord / @number_of_frets
         radius_of_finger = (height_of_fret * 0.6) / 2
         
-        width_of_fret = width_of_chord / x_div
+        width_of_fret = width_of_chord / (@strings.size - 1)
 
         # Draw all horizontal lines
         (@number_of_frets+1).times do |n|
