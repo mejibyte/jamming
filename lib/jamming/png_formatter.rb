@@ -92,8 +92,7 @@ module Jamming
               :font_size => 36,
               :font_family => 'helvetica',
               :fill => 'black',
-              :font_weight => 'bold',
-            )
+              :font_weight => 'bold')
           end
         end
 
