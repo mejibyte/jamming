@@ -1,6 +1,23 @@
 = jamming
 
-Description goes here.
+Jamming is a Ruby library to generate images of guitar chords.
+
+== Installation
+
+    gem install jamming
+
+or if you are using Bundler, add this line to your Gemfile:
+
+    gem "jamming"
+    
+== Usage
+
+    File.open("/tmp/old_good_jimi.png", 'w') do |f|
+       chord = Jamming::Chord.new("0-7-6-7-8-x")
+       f.write chord.to_png(:label => "Em7#9")
+    end
+    
+This will write Em7#9, _The Jimi Hendrix Chord_, to `tmp/old_good_jimi.png`.
 
 == Contributing to jamming
  
@@ -17,3 +34,6 @@ Description goes here.
 Copyright (c) 2010 Andrés Mejía. See LICENSE.txt for
 further details.
 
+== Other important notes
+
+You suck if you don't play guitar.
