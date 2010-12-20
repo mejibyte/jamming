@@ -17,7 +17,7 @@ or if you are using Bundler, add this line to your Gemfile:
        f.write chord.to_png(:label => "Em7#9")
     end
     
-This will write Em7#9, _The Jimi Hendrix Chord_, to `tmp/old_good_jimi.png`.
+This will write Em7#9, <em>The Jimi Hendrix Chord<em>, to <tt>tmp/old_good_jimi.png</tt>.
 
 == Thanks
 
