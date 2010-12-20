@@ -25,7 +25,7 @@ This will write Em7#9, <em>The Jimi Hendrix Chord</em>, to <tt>tmp/old_good_jimi
 Thanks
 ---
 
-Some code based on [ander/chords][https://github.com/ander/chords], thanks!
+Some code based on [ander/chords](https://github.com/ander/chords), thanks!
 
 Contributing to jamming
 ---
