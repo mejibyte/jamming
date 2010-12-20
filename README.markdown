@@ -20,7 +20,7 @@ Usage
        f.write chord.to_png(:label => "Em7#9")
     end
     
-This will write Em7#9, <em>The Jimi Hendrix Chord</em>, to <tt>tmp/old_good_jimi.png</tt>:
+This will write Em7#9, <em>The Jimi Hendrix Chord</em>, to <tt>/tmp/old_good_jimi.png</tt>:
 
 ![Em7#9 - The Jimi Hendrix Chord](https://github.com/andmej/jamming/raw/master/examples/Em7%239.png)
 
