@@ -39,7 +39,7 @@ will generate an image like this:
 
 (Notice the _A_ label even if you never explicitly declared it.)
 
-If you'd like to override this behavior, pass `:label => nil` to the `to_png` method.
+If you'd like to override this behavior, pass `:label => false` to the `to_png` method (Use exactly `:label => false`, as `:label => nil` still triggers the auto-labeling behavior).
 
 If you find a chord that is not auto-labeled but you'd like it to be, please add it [to this file](https://github.com/andmej/jamming/blob/master/lib/jamming/dictionary.rb) and send a pull request.
 

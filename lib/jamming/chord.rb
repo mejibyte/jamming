@@ -10,7 +10,8 @@ module Jamming
     end
   
     def to_png(options = {})
-      Jamming::PNGFormatter.new(frets).print({ :label => name }.merge(options))
+      label = options[:label] == false ? nil : options[:label] || name
+      Jamming::PNGFormatter.new(frets).print(options.merge(:label => label))
     end
     
     def name
