@@ -1,4 +1,5 @@
 require 'jamming/png_formatter'
+require 'jamming/dictionary'
 
 module Jamming
   class Chord
@@ -9,7 +10,11 @@ module Jamming
     end
   
     def to_png(options = {})
-      Jamming::PNGFormatter.new(frets).print(options)
+      Jamming::PNGFormatter.new(frets).print({ :label => name }.merge(options))
+    end
+    
+    def name
+      Jamming::Dictionary.name_for(frets)
     end
   
     protected
