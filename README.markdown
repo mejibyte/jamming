@@ -45,7 +45,7 @@ If you find a chord that is not auto-labeled but you'd like it to be, please add
 
 ### Front-end
 
-Jamming is better served with a front-end that takes care of generating the images for you. Check out "this tiny Sinatra app":https://github.com/andmej/jamming_frontend that does just that.
+Jamming is better served with a front-end that takes care of generating the images for you. Check out [this tiny Sinatra app](https://github.com/andmej/jamming_frontend) that does just that.
 
 Thanks
 ---
