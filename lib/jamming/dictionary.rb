@@ -26,7 +26,7 @@ module Jamming
     end
     
     private
-      def normalize_frets(frets)
+      def self.normalize_frets(frets)
         join_with = frets.any? { |f| f && f >= 10 } ? "-" : ""
         frets.map { |f| f.nil? ? "x" : f.to_s }.join(join_with)
       end
