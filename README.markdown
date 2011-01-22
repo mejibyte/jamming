@@ -66,7 +66,7 @@ Contributing to jamming
 Copyright
 ---
 
-Copyright (c) 2010 Andrés Mejía. See LICENSE.txt for
+Copyright (c) 2010 Andrés Mejía ([Aprender guitarra](http://guitarra-con-andres.com)). See LICENSE.txt for
 further details.
 
 Other important notes
